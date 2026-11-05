@@ -2,9 +2,7 @@
 
 Projet de portfolio sur des données publiques. Ce n'est pas une mission pour un client, et il n'a aucun lien avec Olist.
 
-![Aperçu de la maquette](docs/maquette_apercu.png)
-
-*Maquette générée à partir des chiffres réels. Remplace-la par une capture Power BI avant publication.*
+![Aperçu du tableau de bord](docs/maquette_apercu.png)
 
 ## Objectif
 
@@ -31,11 +29,9 @@ Détails, mesures DAX et chiffres de contrôle : [docs/guide_technique.md](docs/
 
 ## Ouvrir le projet
 
-1. Copier ce dossier vers `C:\PBI_Olist`.
-2. Ouvrir `Olist_Ventes.pbip` dans une version récente de Power BI Desktop.
-3. Cliquer sur Actualiser.
+Ouvrir `Olist_Ventes.pbix` dans une version récente de Power BI Desktop.
 
-Pour un autre dossier, modifier le paramètre `DossierDonnees`. Pour régénérer les CSV : `python scripts/preparer_donnees.py <csv_bruts> donnees`.
+Pour régénérer les CSV : `python scripts/preparer_donnees.py <csv_bruts> donnees`.
 
 ## Limites
 
