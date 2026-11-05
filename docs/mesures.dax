@@ -1,0 +1,53 @@
+// Crée ces mesures dans la table Fait_Ventes.
+
+// Format : "R$" #,0
+Chiffre d'affaires =
+SUM(Fait_Ventes[price])
+
+// Format : #,0
+Commandes =
+DISTINCTCOUNT(Fait_Ventes[order_id])
+
+// Format : "R$" #,0.00
+Panier moyen =
+DIVIDE([Chiffre d'affaires], [Commandes])
+
+// Format : #,0
+Clients uniques =
+DISTINCTCOUNT(Fait_Ventes[customer_unique_id])
+
+// Format : "R$" #,0
+CA mensuel =
+CALCULATE([Chiffre d'affaires], KEEPFILTERS(Dim_Date[annee] >= 2017))
+
+// Format : 0.0%
+Part du CA =
+DIVIDE([Chiffre d'affaires], CALCULATE([Chiffre d'affaires], ALLSELECTED()))
+
+// Format : "R$" #,0
+CA Top 10 catégories =
+VAR Rang =
+    RANKX(ALLSELECTED(Dim_Produit[categorie_fr]), [Chiffre d'affaires], , DESC, Skip)
+RETURN
+    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])
+
+// Format : "R$" #,0
+CA Top 10 produits =
+VAR Rang =
+    RANKX(ALLSELECTED(Dim_Produit[produit_libelle]), [Chiffre d'affaires], , DESC, Skip)
+RETURN
+    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])
+
+// Format : "R$" #,0
+CA Top 10 villes =
+VAR Rang =
+    RANKX(ALLSELECTED(Dim_Client[ville_etat]), [Chiffre d'affaires], , DESC, Skip)
+RETURN
+    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])
+
+// Format : "R$" #,0
+CA Top 10 États =
+VAR Rang =
+    RANKX(ALLSELECTED(Dim_Client[etat_libelle]), [Chiffre d'affaires], , DESC, Skip)
+RETURN
+    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])

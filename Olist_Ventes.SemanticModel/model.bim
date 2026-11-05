@@ -1,0 +1,654 @@
+{
+  "compatibilityLevel": 1606,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"DossierDonnees\", \"Fait_Ventes\", \"Dim_Produit\", \"Dim_Client\", \"Dim_Date\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "dim_date.annee": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Dim_Date",
+                    "ConceptualProperty": "annee"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Année": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DossierDonnees",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"   C:\\Users\\USER\\PBI_Olist\\PBI_Olist\\donnees\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "918e5b9a-d28c-4f20-9933-811ceea6a98d"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "998adf9c-19a4-597a-9da9-f6ada5b92978",
+        "fromColumn": "product_id",
+        "fromTable": "Fait_Ventes",
+        "toColumn": "product_id",
+        "toTable": "Dim_Produit"
+      },
+      {
+        "name": "2deb7d7a-8bf7-5a44-9677-384b4086170d",
+        "fromColumn": "customer_id",
+        "fromTable": "Fait_Ventes",
+        "toColumn": "customer_id",
+        "toTable": "Dim_Client"
+      },
+      {
+        "name": "f85b8e44-e011-5f53-b7fb-0ae40a810cdd",
+        "fromColumn": "date_achat",
+        "fromTable": "Fait_Ventes",
+        "toColumn": "date",
+        "toTable": "Dim_Date"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "Fait_Ventes",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "order_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "da460d53-694e-4a1e-8cd6-9fbdd7325646",
+            "sourceColumn": "order_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "order_item_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "a026fccd-f30d-406f-97e5-da0711e0c2d5",
+            "sourceColumn": "order_item_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e8a06562-6326-40c2-8ac7-cffb73acbe39",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_unique_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "42604e16-10d5-4ea4-b2e8-4c5f50ac45f1",
+            "sourceColumn": "customer_unique_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "product_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "31672187-5fd8-4caa-8eb3-1383c28a9360",
+            "sourceColumn": "product_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "date_achat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "isHidden": true,
+            "lineageTag": "74d0fddb-cc78-4659-8508-81c0fffc9d75",
+            "sourceColumn": "date_achat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "price",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\"R$\" #,0.00",
+            "lineageTag": "237f233b-9bd5-48b2-800d-0f0446812087",
+            "sourceColumn": "price",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "freight_value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\"R$\" #,0.00",
+            "lineageTag": "4ab430cb-7038-4b42-b342-5a375c424a16",
+            "sourceColumn": "freight_value",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "084e53cd-a5e0-4e3d-abca-828c155b654a",
+        "measures": [
+          {
+            "name": "Chiffre d'affaires",
+            "expression": "SUM(Fait_Ventes[price])",
+            "formatString": "\"R$\" #,0",
+            "lineageTag": "ab192cba-34fa-4616-aaf4-0dfd580a877f"
+          },
+          {
+            "name": "Commandes",
+            "expression": "DISTINCTCOUNT(Fait_Ventes[order_id])",
+            "formatString": "#,0",
+            "lineageTag": "3fe6ab6b-f5fc-42e6-a513-764411d0a97a"
+          },
+          {
+            "name": "Panier moyen",
+            "expression": "DIVIDE([Chiffre d'affaires], [Commandes])",
+            "formatString": "\"R$\" #,0.00",
+            "lineageTag": "6e1a29d5-13a5-441d-ab4f-beeb660d355a"
+          },
+          {
+            "name": "Clients uniques",
+            "expression": "DISTINCTCOUNT(Fait_Ventes[customer_unique_id])",
+            "formatString": "#,0",
+            "lineageTag": "b81ebb4a-72e8-4a06-8584-4c1fce371955"
+          },
+          {
+            "name": "CA mensuel",
+            "expression": "CALCULATE([Chiffre d'affaires], KEEPFILTERS(Dim_Date[annee] >= 2017))",
+            "formatString": "\"R$\" #,0",
+            "lineageTag": "b18226f3-800d-4ea0-9ad0-8d58fbd8220b"
+          },
+          {
+            "name": "Part du CA",
+            "expression": "DIVIDE([Chiffre d'affaires], CALCULATE([Chiffre d'affaires], ALLSELECTED()))",
+            "formatString": "0.0%",
+            "lineageTag": "f4107179-ec70-40d6-8be6-090c7e865463"
+          },
+          {
+            "name": "CA Top 10 catégories",
+            "expression": [
+              "VAR Rang =",
+              "    RANKX(ALLSELECTED(Dim_Produit[categorie_fr]), [Chiffre d'affaires], , DESC, Skip)",
+              "RETURN",
+              "    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])"
+            ],
+            "formatString": "\"R$\" #,0",
+            "lineageTag": "a6704a20-7b0b-4c25-8365-d0073cea350e"
+          },
+          {
+            "name": "CA Top 10 produits",
+            "expression": [
+              "VAR Rang =",
+              "    RANKX(ALLSELECTED(Dim_Produit[produit_libelle]), [Chiffre d'affaires], , DESC, Skip)",
+              "RETURN",
+              "    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])"
+            ],
+            "formatString": "\"R$\" #,0",
+            "lineageTag": "031fd5f5-e097-4587-9ab6-3a82ebcba5ea"
+          },
+          {
+            "name": "CA Top 10 villes",
+            "expression": [
+              "VAR Rang =",
+              "    RANKX(ALLSELECTED(Dim_Client[ville_etat]), [Chiffre d'affaires], , DESC, Skip)",
+              "RETURN",
+              "    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])"
+            ],
+            "formatString": "\"R$\" #,0",
+            "lineageTag": "fa5ae71b-c62f-4162-bce0-31afd69c3dc3"
+          },
+          {
+            "name": "CA Top 10 États",
+            "expression": [
+              "VAR Rang =",
+              "    RANKX(ALLSELECTED(Dim_Client[etat_libelle]), [Chiffre d'affaires], , DESC, Skip)",
+              "RETURN",
+              "    IF(NOT ISBLANK([Chiffre d'affaires]) && Rang <= 10, [Chiffre d'affaires])"
+            ],
+            "formatString": "\"R$\" #,0",
+            "lineageTag": "b78dff48-73d4-42bb-8f5d-22fedb85871d"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fait_Ventes",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DossierDonnees & \"Fait_Ventes.csv\"), [Delimiter=\",\", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Entetes = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Types = Table.TransformColumnTypes(Entetes, {{\"order_id\", type text}, {\"order_item_id\", Int64.Type}, {\"customer_id\", type text}, {\"customer_unique_id\", type text}, {\"product_id\", type text}, {\"date_achat\", type date}, {\"price\", Currency.Type}, {\"freight_value\", Currency.Type}}, \"en-US\")",
+                "in",
+                "    Types"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Produit",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "product_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "4059b45a-6577-425a-b2a0-acad5906ca00",
+            "sourceColumn": "product_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "code_produit",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "064b9e81-9e2c-4676-ac48-c07acf55a0a3",
+            "sourceColumn": "code_produit",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "produit_libelle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8e9c0098-47da-46d7-90db-fa4a0bf48e6a",
+            "sourceColumn": "produit_libelle",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "categorie_fr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b9855402-3dac-4752-b4d2-17fbcb8e22c7",
+            "sourceColumn": "categorie_fr",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "categorie_en",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9925e919-7f69-4f60-8781-20b8148314ca",
+            "sourceColumn": "categorie_en",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3fb4b96b-96c9-4ce8-9254-720601b1fef3",
+        "partitions": [
+          {
+            "name": "Dim_Produit",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DossierDonnees & \"Dim_Produit.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Entetes = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Types = Table.TransformColumnTypes(Entetes, {{\"product_id\", type text}, {\"code_produit\", type text}, {\"produit_libelle\", type text}, {\"categorie_fr\", type text}, {\"categorie_en\", type text}}, \"en-US\")",
+                "in",
+                "    Types"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Client",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "customer_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "f0167b38-0117-4f2e-89d8-39526f5e310a",
+            "sourceColumn": "customer_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_unique_id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "8a413191-657b-4454-a1f3-e5fa186ca7de",
+            "sourceColumn": "customer_unique_id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ville",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "26df904b-c316-4c02-a4b8-857ca31a4429",
+            "sourceColumn": "ville",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "uf",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b33ee71d-b1b5-418b-9559-394fab2d681a",
+            "sourceColumn": "uf",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "etat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "135e13ac-c85b-4fb1-99c0-859dcab25192",
+            "sourceColumn": "etat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ville_etat",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9e2379d4-28f5-4b0a-a2f1-303ea14c8cda",
+            "sourceColumn": "ville_etat",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "etat_libelle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3d65050b-a5f4-4758-8cdd-962da71b90f5",
+            "sourceColumn": "etat_libelle",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d52465e2-f8c5-415f-9ac7-80860fc5db2c",
+        "partitions": [
+          {
+            "name": "Dim_Client",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DossierDonnees & \"Dim_Client.csv\"), [Delimiter=\",\", Columns=7, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Entetes = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Types = Table.TransformColumnTypes(Entetes, {{\"customer_id\", type text}, {\"customer_unique_id\", type text}, {\"ville\", type text}, {\"uf\", type text}, {\"etat\", type text}, {\"ville_etat\", type text}, {\"etat_libelle\", type text}}, \"en-US\")",
+                "in",
+                "    Types"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Dim_Date",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "isKey": true,
+            "lineageTag": "080a3e58-9b97-4a55-8823-9ea5eddcf7bb",
+            "sourceColumn": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "annee",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "lineageTag": "45529039-ac0d-499f-ab1c-c102385ee93f",
+            "sourceColumn": "annee",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mois_num",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "isHidden": true,
+            "lineageTag": "414cfb0c-2839-49b2-8726-b0ef68732b5d",
+            "sourceColumn": "mois_num",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mois_debut",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "yyyy-mm-dd",
+            "isHidden": true,
+            "lineageTag": "2a430adb-b7ef-47f5-b88b-fb7f1951e7aa",
+            "sourceColumn": "mois_debut",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "mois_libelle",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b42acb3e-f327-470e-b2ac-4ff39e7fc5f2",
+            "sortByColumn": "mois_debut",
+            "sourceColumn": "mois_libelle",
+            "summarizeBy": "none"
+          }
+        ],
+        "dataCategory": "Time",
+        "lineageTag": "0283520b-ee50-40f9-85e0-4382bc37033c",
+        "partitions": [
+          {
+            "name": "Dim_Date",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(File.Contents(DossierDonnees & \"Dim_Date.csv\"), [Delimiter=\",\", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Entetes = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    Types = Table.TransformColumnTypes(Entetes, {{\"date\", type date}, {\"annee\", Int64.Type}, {\"mois_num\", Int64.Type}, {\"mois_debut\", type date}, {\"mois_libelle\", type text}}, \"en-US\")",
+                "in",
+                "    Types"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

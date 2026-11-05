@@ -1,0 +1,68 @@
+﻿bloc;element;ca_brl;commandes
+total;Toute la période;13221498.11;96478
+annee;2016;40470.98;267
+annee;2017;5962902.01;43428
+annee;2018;7218125.12;52783
+mois;2016-09;134.97;1
+mois;2016-10;40325.11;265
+mois;2016-12;10.90;1
+mois;2017-01;111798.36;750
+mois;2017-02;234223.40;1653
+mois;2017-03;359198.85;2546
+mois;2017-04;340669.68;2303
+mois;2017-05;489338.25;3546
+mois;2017-06;421923.37;3135
+mois;2017-07;481604.52;3872
+mois;2017-08;554699.70;4193
+mois;2017-09;607399.67;4150
+mois;2017-10;648247.65;4478
+mois;2017-11;987765.37;7289
+mois;2017-12;726033.19;5513
+mois;2018-01;924645.00;7069
+mois;2018-02;826437.13;6555
+mois;2018-03;953356.25;7003
+mois;2018-04;973534.09;6798
+mois;2018-05;977544.69;6749
+mois;2018-06;856077.86;6099
+mois;2018-07;867953.46;6159
+mois;2018-08;838576.64;6351
+categorie;Beauté et santé;1233131.72;8647
+categorie;Montres et cadeaux;1166176.98;5495
+categorie;Linge de maison;1023434.76;9272
+categorie;Sport et loisirs;954852.55;7530
+categorie;Accessoires informatiques;888724.61;6530
+categorie;Meubles et décoration;711927.69;6307
+categorie;Articles ménagers;615628.69;5743
+categorie;Objets tendance;610204.10;3559
+categorie;Automobile;578966.65;3810
+categorie;Jouets;471286.48;3804
+produit;Beauté et santé · bb50f2e2;63560.00;186
+produit;Beauté et santé · 6cdd5384;53652.30;148
+produit;Ordinateurs · d6160fb7;45949.35;33
+produit;Access. informatiques · d1c42706;45620.56;313
+produit;Linge de maison · 99a4788c;42049.66;456
+produit;Access. informatiques · 3dd2a171;40782.80;253
+produit;Bébé · 25c38557;38907.32;38
+produit;Objets tendance · 5f504b3a;37733.90;63
+produit;Montres et cadeaux · 53b36df6;37454.63;304
+produit;Meubles et décoration · aca2eb7d;37104.30;425
+etat;São Paulo (SP);5067633.16;40501
+etat;Rio de Janeiro (RJ);1759651.13;12350
+etat;Minas Gerais (MG);1552481.83;11354
+etat;Rio Grande do Sul (RS);728897.47;5345
+etat;Paraná (PR);666063.51;4923
+etat;Santa Catarina (SC);507012.13;3546
+etat;Bahia (BA);493584.14;3256
+etat;Distrito Federal (DF);296498.41;2080
+etat;Goiás (GO);282836.70;1957
+etat;Espírito Santo (ES);268643.45;1995
+ville;São Paulo (SP);1859556.83;15045
+ville;Rio de Janeiro (RJ);955573.97;6601
+ville;Belo Horizonte (MG);346039.04;2697
+ville;Brasília (DF);295814.72;2071
+ville;Curitiba (PR);205999.33;1489
+ville;Campinas (SP);184657.87;1406
+ville;Porto Alegre (RS);182319.55;1342
+ville;Salvador (BA);173273.05;1188
+ville;Guarulhos (SP);139008.19;1144
+ville;Niterói (RJ);115890.26;825
